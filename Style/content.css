@@ -26,6 +26,45 @@ h4{
     
 }
 
+#addCart{
+    position: relative;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    overflow: hidden;
+    background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+
+#addCart :nth-child(2){
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+}
+
+span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
 .tabcontent {
     display: none;
     padding: 6px 12px;
