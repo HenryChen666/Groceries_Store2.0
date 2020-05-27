@@ -43,6 +43,22 @@ h4{
     background: linear-gradient(90deg,#755bea,#ff72c0);
 }
 
+#checkoutbtn{
+    position: relative;
+    border: 2px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: black;
+}
+
+#checkoutbtn :nth-child(2){
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+}
 span{
     position: absolute;
     background: #fff;

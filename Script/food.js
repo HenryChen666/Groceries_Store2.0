@@ -113,6 +113,62 @@ function restrictListProducts(prods, restriction) {
 		return a.price - b.price;
 	});
 
+	var organic = checkornot("option1");
+	var diabetic = checkornot("option2");
+	var lactose = checkornot("option3");
+
+	console.log( organic == true);
+	if (organic == true){
+		for (let i=0; i<prods.length; i+=1) {
+			if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) && (prods[i].organic == true)){
+				console.log(prods[i].organic);
+				
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true) && (prods[i].organic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "None") && (prods[i].organic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+		}
+	}
+	else if ( diabetic == true){
+		for (let i=0; i<prods.length; i+=1) {
+			if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true) && (prods[i].diabetic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "None") && (prods[i].diabetic == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+		}
+	}
+	else if (lactose == true){
+		for (let i=0; i<prods.length; i+=1) {
+			if ((restriction == "Vegetarian") && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true) && (prods[i].lactose == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+			else if ((restriction == "None") && (prods[i].lactose == true)){
+				product_names.push({name:prods[i].name, price:prods[i].price});
+			}
+		}
+	}
+	else{
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push({name:prods[i].name, price:prods[i].price});
@@ -127,7 +183,14 @@ function restrictListProducts(prods, restriction) {
 			product_names.push({name:prods[i].name, price:prods[i].price});
 		}
 	}
+}
 	return product_names;
+}
+
+// check if any of more information checkbox is checked or not
+function checkornot(id){
+	var x = document.getElementById(id).checked;
+	return x;
 }
 
 // Calculate the total price of items, with received parameter being a list of products

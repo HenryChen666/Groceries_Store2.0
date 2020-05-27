@@ -97,8 +97,27 @@
     <p>Here is your cart.</p>
     <div id="displayCart"></div>
     <img src="Image/MasterCard.jpg" alt="MasterCard" style="width: 500px; height:60px"><br>
-    <button id = "checkout" type="button" class="checkout"> Check Out</button>
+    <div class="checkoutbtn">
+    <button id = "checkoutbtn" type="button" class="checkout"> Check Out</button>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll('.checkout');
+      buttons.forEach(btn =>{
+        btn.addEventListener('click', function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clinentY - e.target.offsetTop;
 
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+
+            setTimeout(() => {
+              ripples.remove() 
+            },1000);
+        })
+      })
+    </script>
+  </div>
   </div>
 
   <div class="footer">
