@@ -6,6 +6,10 @@ var products = [
 		Lactose: false,
 		vegetarian: true,
 		glutenFree: true,
+		dairy:false;
+		vegetables:true;
+		meat:false;
+		seafood:false;
 		price: 1.99
 	},
 	{
@@ -15,6 +19,10 @@ var products = [
 		Lactose: false,
 		vegetarian: true,
 		glutenFree: true,
+		dairy:false;
+		vegetables:true;
+		meat:false;
+		seafood:false;
 		price: 1.50
 	},
 	{
@@ -24,6 +32,10 @@ var products = [
 		Lactose: false,
 		vegetarian: true,
 		glutenFree: true,
+		dairy:true;
+		vegetables:false;
+		meat:false;
+		seafood:false;
 		price: 4.00
 	},
 	{
@@ -33,6 +45,10 @@ var products = [
 		Lactose: false,
 		vegetarian: true,
 		glutenFree: true,
+		dairy:true;
+		vegetables:false;
+		meat:false;
+		seafood:false;
 		price: 2.55
 	},
 	{
@@ -42,6 +58,10 @@ var products = [
 		Lactose: true,
 		vegetarian: true,
 		glutenFree: true,
+		dairy:true;
+		vegetables:false;
+		meat:false;
+		seafood:false;
 		price: 3.55
 	},
 	{
@@ -51,6 +71,10 @@ var products = [
 		Lactose: false,
 		vegetarian: true,
 		glutenFree: false,
+		dairy:true;
+		vegetables:false;
+		meat:false;
+		seafood:false;
 		price: 2.35
 	},
 	{
@@ -60,6 +84,10 @@ var products = [
 		Lactose: false,
 		vegetarian: false,
 		glutenFree: true,
+		dairy:false;
+		vegetables:false;
+		meat:false;
+		seafood:true;
 		price: 10.00
 	},
 	{
@@ -69,6 +97,10 @@ var products = [
 		Lactose: false,
 		vegetarian: false,
 		glutenFree: true,
+		dairy:false;
+		vegetables:false;
+		meat:true;
+		seafood:false;
 		price: 15.00
 	},
 	{
@@ -78,6 +110,10 @@ var products = [
 		Lactose: false,
 		vegetarian: false,
 		glutenFree: true,
+		dairy:false;
+		vegetables:false;
+		meat:true;
+		seafood:false;
 		price: 13.00
 	},
 	{
@@ -87,6 +123,10 @@ var products = [
 		Lactose: false,
 		vegetarian: false,
 		glutenFree: true,
+		dairy:false;
+		vegetables:false;
+		meat:false;
+		seafood:true;
 		price: 9.00
 	},
 	{
@@ -96,6 +136,10 @@ var products = [
 		Lactose: false,
 		vegetarian: false,
 		glutenFree: true,
+		dairy:false;
+		vegetables:false;
+		meat:false;
+		seafood:true;
 		price: 20.00
 	}
 	

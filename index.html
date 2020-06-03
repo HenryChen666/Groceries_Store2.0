@@ -16,7 +16,8 @@
   <script src="Script/sidebar.js"></script>
   <button id = "dropdown" class="dropdown-btn">Products <i class="fa fa-caret-down"></i></button>
     <div class = "dropdown-container">
-      <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Fruit')">Fruit</a>
+      <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Dairy')">Dairy</a>
+        <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Vegetables')">Vegetables</a>
       <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Meat')">Meat</a>
       <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Seafood')">Seafood</a>
     </div><br>
@@ -86,8 +87,40 @@
     <label for="option3">Lactose Intolerant</label>
   </div>
 
-  <!--Product Content-->
-  <div id="Fruit" class="tabcontent">
+  <!--Dairy Content-->
+  <div id="Dairy" class="tabcontent">
+    <h1 style="text-align: center;">Products </h1>
+    <p><b>Sorted: Price Low to High</b></p>
+     <h2>Choose items to buy:</h2>
+     <div id="displayProduct"></div>
+     <br>
+    <div class="addcart">
+     <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      Add selected items to cart.
+    </button>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll('.block');
+      buttons.forEach(btn =>{
+        btn.addEventListener('click', function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clinentY - e.target.offsetTop;
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+
+            setTimeout(() => {
+              ripples.remove() 
+            },1000);
+        })
+      })
+    </script>
+    </div>
+  </div>
+  
+  <!--Vegetables-->
+  <div id="Vegetables" class="tabcontent">
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
