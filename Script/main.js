@@ -278,7 +278,7 @@ function selectedItems(){
 	// add paragraph and total price
 	c.appendChild(para);
 	var totalprice = document.createElement("b");
-	var t = document.createTextNode("Total Price is " + getTotalPrice(chosenProducts));
+	var t = document.createTextNode("Total Price is $ " + getTotalPrice(chosenProducts));
 	totalprice.style.fontSize = "25px";
 	totalprice.appendChild(t)
 	c.appendChild(totalprice);
