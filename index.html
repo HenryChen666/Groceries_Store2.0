@@ -60,7 +60,7 @@
     
   </div>
 
-
+  <!--Filter Tab-->
   <div id="Filter" class="tabcontent">
     <h1 style="text-align: center;">Filter </h1>
     <p>Please Select a Category</p>
@@ -70,7 +70,8 @@
         Gluten is a group of proteins found in certain grains, such as wheat, rye, and barley.</p></li>
     </ul>
     <h3>Choose a Category:</h3>
-    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'DairyProduct')">   <!--, 'VegetableProduct', 'MeatProduct', 'SeafoodProduct'-->
+    
     <option value="">Please Select</option>
     <option value="Vegetarian and GlutenFree"> Vegetarian and GlutenFree</option>
     <option value="Vegetarian">Vegetarian</option>
@@ -92,7 +93,7 @@
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
-     <div id="displayProduct"></div>
+     <div id="DairyProduct"></div>
      <br>
     <div class="addcart">
      <button id="addCart" type="button" class="block" onclick="selectedItems()">
@@ -124,7 +125,7 @@
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
-     <div id="displayProduct"></div>
+     <div id="VegetableProduct"></div>
      <br>
     <div class="addcart">
      <button id="addCart" type="button" class="block" onclick="selectedItems()">
@@ -156,7 +157,7 @@
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
-     <div id="displayProduct"></div>
+     <div id="MeatProduct"></div>
      <br>
     <div class="addcart">
      <button id="addCart" type="button" class="block" onclick="selectedItems()">
@@ -188,7 +189,7 @@
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
-     <div id="displayProduct"></div>
+     <div id="SeafoodProduct"></div>
      <br>
     <div class="addcart">
      <button id="addCart" type="button" class="block" onclick="selectedItems()">
