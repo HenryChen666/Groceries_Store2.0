@@ -63,19 +63,19 @@
   <!--Filter Tab-->
   <div id="Filter" class="tabcontent">
     <h1 style="text-align: center;">Filter </h1>
-    <p>Please Select a Category</p>
+    <p><b>Information</b></p>
     <ul>
       <li><b>Vegetarian</b><p>Vegetarianism is the practice of abstaining from the consumption of meat (red meat, poultry, seafood, and the flesh of any other animal), and may also include abstention from by-products of animal slaughter.</p></li>
-      <li><b>Glutenfree</b><p>
+      <li><b>Glutenfree (No Gluten)</b><p>
         Gluten is a group of proteins found in certain grains, such as wheat, rye, and barley.</p></li>
     </ul>
-    <h3>Choose a Category:</h3>
+    <h3><b>Do You Describe Yourself as a: </b></h3>
     <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'DairyProduct')">   <!--, 'VegetableProduct', 'MeatProduct', 'SeafoodProduct'-->
     
     <option value="">Please Select</option>
-    <option value="Vegetarian and GlutenFree"> Vegetarian and GlutenFree</option>
+    <option value="Vegetarian and GlutenFree"> Vegetarian and No Gluten</option>
     <option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
+    <option value="GlutenFree">No Gluten</option>
     <option value="None">None</option>
     </select>
 
@@ -90,9 +90,9 @@
 
   <!--Dairy Content-->
   <div id="Dairy" class="tabcontent">
-    <h1 style="text-align: center;">Products </h1>
+    <h1 style="text-align: center;">Dairy </h1>
     <p><b>Sorted: Price Low to High</b></p>
-     <h2>Choose items to buy:</h2>
+     <h2>Please select items to buy:</h2>
 
      <div id="DairyProduct"></div>
 
@@ -124,9 +124,9 @@
   
   <!--Vegetables-->
   <div id="Vegetables" class="tabcontent">
-    <h1 style="text-align: center;">Products </h1>
+    <h1 style="text-align: center;">Vegetables </h1>
     <p><b>Sorted: Price Low to High</b></p>
-     <h2>Choose items to buy:</h2>
+     <h2>Please select items to buy:</h2>
      <div id="VegetableProduct"></div>
      <br>
     <div class="addcart">
@@ -156,9 +156,9 @@
   
   <!--Meat-->
   <div id="Meat" class="tabcontent">
-    <h1 style="text-align: center;">Products </h1>
+    <h1 style="text-align: center;">Meat </h1>
     <p><b>Sorted: Price Low to High</b></p>
-     <h2>Choose items to buy:</h2>
+     <h2>Please select items to buy:</h2>
      <div id="MeatProduct"></div>
      <br>
     <div class="addcart">
@@ -188,9 +188,9 @@
 
   <!--Seafood-->
   <div id="Seafood" class="tabcontent">
-    <h1 style="text-align: center;">Products </h1>
+    <h1 style="text-align: center;">Seafood </h1>
     <p><b>Sorted: Price Low to High</b></p>
-     <h2>Choose items to buy:</h2>
+     <h2>Please select items to buy:</h2>
      <div id="SeafoodProduct"></div>
      <br>
     <div class="addcart">
@@ -222,7 +222,7 @@
 
   <div id="Cart" class="tabcontent">
     <h1 style="text-align: center;">Cart </h1>
-    <h2>Here is your cart.</h2>
+    <h2>Items in your Cart</h2>
     <div id="displayCart"></div>
     <img src="Image/MasterCard.jpg" alt="MasterCard" style="width: 500px; height:60px"><br>
     <div class="checkoutbtn">

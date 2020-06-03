@@ -84,6 +84,7 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
+		checkbox.price = productprice;
 		checkbox.id = productId;
 		div.appendChild(checkbox);
 
@@ -129,6 +130,7 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
+		checkbox.price = productprice;
 		checkbox.id = productId;
 		div.appendChild(checkbox);
 
@@ -174,6 +176,7 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
+		checkbox.price = productprice;
 		checkbox.id = productId;
 		div.appendChild(checkbox);
 
@@ -218,6 +221,7 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
+		checkbox.price = productprice;
 		checkbox.id = productId;
 		div.appendChild(checkbox);
 
@@ -260,12 +264,12 @@ function selectedItems(){
 	c.innerHTML = "";
 	
 	// build list of selected item
-	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
+	var para = document.createElement("p");
+	para.innerHTML = "Items:  ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
+			para.appendChild(document.createTextNode(ele[i].value + " $ " + ele[i].price));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
@@ -273,6 +277,10 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	var totalprice = document.createElement("b");
+	var t = document.createTextNode("Total Price is " + getTotalPrice(chosenProducts));
+	totalprice.style.fontSize = "25px";
+	totalprice.appendChild(t)
+	c.appendChild(totalprice);
 		
 }
