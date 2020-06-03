@@ -16,27 +16,27 @@
   <script src="Script/sidebar.js"></script>
   <button id = "dropdown" class="dropdown-btn">Products <i class="fa fa-caret-down"></i></button>
     <div class = "dropdown-container">
-      <button class = "dropdownbutn" onclick="openInfo(event, 'Products')">Fruit</a>
-      <button class = "dropdownbutn" onclick="openInfo(event, 'Meat')">Meat</a>
-      <button class = "dropdownbutn" onclick="openInfo(event, 'Seafood')">Seafood</a>
+      <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Fruit')">Fruit</a>
+      <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Meat')">Meat</a>
+      <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Seafood')">Seafood</a>
     </div><br>
     <script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-</script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+      </script>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
   
   <!-- Default selected-->
@@ -87,7 +87,7 @@ for (i = 0; i < dropdown.length; i++) {
   </div>
 
   <!--Product Content-->
-  <div id="Products" class="tabcontent">
+  <div id="Fruit" class="tabcontent">
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
@@ -118,6 +118,72 @@ for (i = 0; i < dropdown.length; i++) {
     </div>
   </div>
   
+  <!--Meat-->
+  <div id="Meat" class="tabcontent">
+    <h1 style="text-align: center;">Products </h1>
+    <p><b>Sorted: Price Low to High</b></p>
+     <h2>Choose items to buy:</h2>
+     <div id="displayProduct"></div>
+     <br>
+    <div class="addcart">
+     <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      Add selected items to cart.
+    </button>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll('.block');
+      buttons.forEach(btn =>{
+        btn.addEventListener('click', function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clinentY - e.target.offsetTop;
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+
+            setTimeout(() => {
+              ripples.remove() 
+            },1000);
+        })
+      })
+    </script>
+    </div>
+  </div>
+
+  <!--Seafood-->
+  <div id="Seafood" class="tabcontent">
+    <h1 style="text-align: center;">Products </h1>
+    <p><b>Sorted: Price Low to High</b></p>
+     <h2>Choose items to buy:</h2>
+     <div id="displayProduct"></div>
+     <br>
+    <div class="addcart">
+     <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      Add selected items to cart.
+    </button>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll('.block');
+      buttons.forEach(btn =>{
+        btn.addEventListener('click', function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clinentY - e.target.offsetTop;
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+
+            setTimeout(() => {
+              ripples.remove() 
+            },1000);
+        })
+      })
+    </script>
+    </div>
+  </div>
+
+
+
   <div id="Cart" class="tabcontent">
     <h1 style="text-align: center;">Cart </h1>
     <h2>Here is your cart.</h2>

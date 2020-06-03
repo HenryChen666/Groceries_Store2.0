@@ -83,6 +83,7 @@
   padding-right: 8px;
   color: white;
 }
+
   /* When you mouse over the navigation links, change their color */
   .sidenav button:hover {
     color: black;
@@ -91,11 +92,7 @@
     border-left: 5px black solid;
   }
 
-  .sidenav button:focus{
-    color: black;
-    background-color: white;
-    border-left: 5px black solid;
-  }
+ 
 
   .sidenav button.active{
     color: black;
