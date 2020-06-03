@@ -73,7 +73,8 @@
         Gluten is a group of proteins found in certain grains, such as wheat, rye, and barley.</p></li>
     </ul>
     <h3><b>Do You Describe Yourself as a: </b></h3>
-    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'DairyProduct')">   <!--, 'VegetableProduct', 'MeatProduct', 'SeafoodProduct'-->
+    <!--
+    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'DairyProduct')">   <!--, 'VegetableProduct', 'MeatProduct', 'SeafoodProduct'--
     
     <option value="">Please Select</option>
     <option value="Vegetarian and GlutenFree"> Vegetarian and No Gluten</option>
@@ -81,7 +82,11 @@
     <option value="GlutenFree">No Gluten</option>
     <option value="None">None</option>
     </select>
-
+      -->
+    <input type="radio" id="Vegetarian and No Gluten" name="dietSelect" value = "Vegetarian and GlutenFree" onchange="populateListProductChoices(this.id, 'DairyProduct')">Vegetarian and No Gluten<br>
+    <input type="radio" id="Vegetarian" name="dietSelect" value = "Vegetarian" onchange="populateListProductChoices(this.id, 'DairyProduct')">Vegetarian<br>
+    <input type="radio" id="No Gluten" name="dietSelect" value = "GlutenFree" onchange="populateListProductChoices(this.id, 'DairyProduct')">No Gluten<br>
+    <input type="radio" id="None" name="dietSelect" value = "None" onchange="populateListProductChoices(this.id, 'DairyProduct')">None<br>
     <h3>More Options:</h3>
     <input type="checkbox" id="option1" name="option1" value="Organic_Products">
     <label for="option1">Organic Products</label>
