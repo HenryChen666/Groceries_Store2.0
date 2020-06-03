@@ -73,21 +73,43 @@ function populateListProductChoices(slct1, slct2) {
 			
 		var productName = optionArray[i].name;
 		var productprice = optionArray[i].price;
+		var productId = optionArray[i].id;
+		var productimg = optionArray[i].img;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var div = document.createElement("div");
+		var inline = document.createElement("li");
+		var ul = document.createElement("ul");
+		div.className = "wrap";
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s2.appendChild(checkbox);
+		checkbox.id = productId;
+		div.appendChild(checkbox);
 
+
+		var x = document.createElement("img");
+		x.setAttribute("src", productimg);
+		x.setAttribute("width", "304");
+		x.setAttribute("height", "228");
+		x.setAttribute("alt", "img");
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode( productName + " $" + productprice));
-		s2.appendChild(label);
+		var h = document.createElement("H2");
+
+		var t = document.createTextNode(productName + " $" + productprice);
+		h.appendChild(t);
+		label.htmlFor = "productlist";
+		label.className = "textOverImage"
+		label.appendChild(h);
+		s2.appendChild(x);
+		div.appendChild(label)
+		s2.appendChild(div);
+		
+		
 	
 		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));
+		//s2.appendChild(document.createElement("br"));
      
 	}
 
@@ -96,21 +118,43 @@ function populateListProductChoices(slct1, slct2) {
 			
 		var productName = optionArrayVegetable[i].name;
 		var productprice = optionArrayVegetable[i].price;
+		var productId = optionArrayVegetable[i].id;
+		var productimg = optionArrayVegetable[i].img;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var div = document.createElement("div");
+		var inline = document.createElement("li");
+		var ul = document.createElement("ul");
+		div.className = "wrap";
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s3.appendChild(checkbox);
+		checkbox.id = productId;
+		div.appendChild(checkbox);
+
 
 		// create a label for the checkbox, and also add in HTML DOM
+		var x = document.createElement("img");
+		x.setAttribute("src", productimg);
+		x.setAttribute("width", "304");
+		x.setAttribute("height", "228");
+		x.setAttribute("alt", "img");
+		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode( productName + " $" + productprice));
-		s3.appendChild(label);
+		var h = document.createElement("H2");
+
+		var t = document.createTextNode(productName + " $" + productprice);
+		h.appendChild(t);
+		label.htmlFor = "productlist";
+		label.className = "textOverImage"
+		label.appendChild(h);
+		s3.appendChild(x);
+		div.appendChild(label)
+		s3.appendChild(div);
+		
 	
 		// create a breakline node and add in HTML DOM
-		s3.appendChild(document.createElement("br"));
+		//s3.appendChild(document.createElement("br"));
      
 	}
 
@@ -119,21 +163,42 @@ function populateListProductChoices(slct1, slct2) {
 			
 		var productName = optionArrayMeat[i].name;
 		var productprice = optionArrayMeat[i].price;
+		var productId = optionArrayMeat[i].id;
+		var productimg = optionArrayMeat[i].img;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var div = document.createElement("div");
+		var inline = document.createElement("li");
+		var ul = document.createElement("ul");
+		div.className = "wrap";
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s4.appendChild(checkbox);
+		checkbox.id = productId;
+		div.appendChild(checkbox);
+
 
 		// create a label for the checkbox, and also add in HTML DOM
+		var x = document.createElement("img");
+		x.setAttribute("src", productimg);
+		x.setAttribute("width", "304");
+		x.setAttribute("height", "228");
+		x.setAttribute("alt", "img");
+		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode( productName + " $" + productprice));
-		s4.appendChild(label);
-	
+		var h = document.createElement("H2");
+
+		var t = document.createTextNode(productName + " $" + productprice);
+		h.appendChild(t);
+		label.htmlFor = "productlist";
+		label.className = "textOverImage"
+		label.appendChild(h);
+		s4.appendChild(x);
+		div.appendChild(label)
+		s4.appendChild(div);
+		
 		// create a breakline node and add in HTML DOM
-		s4.appendChild(document.createElement("br"));
+		//s4.appendChild(document.createElement("br"));
      
 	}
 
@@ -142,21 +207,42 @@ function populateListProductChoices(slct1, slct2) {
 			
 		var productName = optionArraySeafood[i].name;
 		var productprice = optionArraySeafood[i].price;
+		var productId = optionArraySeafood[i].id;
+		var productimg = optionArraySeafood[i].img;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var div = document.createElement("div");
+		var inline = document.createElement("li");
+		var ul = document.createElement("ul");
+		div.className = "wrap";
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s5.appendChild(checkbox);
+		checkbox.id = productId;
+		div.appendChild(checkbox);
+
 
 		// create a label for the checkbox, and also add in HTML DOM
+		var x = document.createElement("img");
+		x.setAttribute("src", productimg);
+		x.setAttribute("width", "304");
+		x.setAttribute("height", "228");
+		x.setAttribute("alt", "img");
+		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode( productName + " $" + productprice));
-		s5.appendChild(label);
-	
+		var h = document.createElement("H2");
+
+		var t = document.createTextNode(productName + " $" + productprice);
+		h.appendChild(t);
+		label.htmlFor = "productlist";
+		label.className = "textOverImage"
+		label.appendChild(h);
+		s5.appendChild(x);
+		div.appendChild(label)
+		s5.appendChild(div);
+		
 		// create a breakline node and add in HTML DOM
-		s5.appendChild(document.createElement("br"));
+		//s5.appendChild(document.createElement("br"));
      
 	}
 }

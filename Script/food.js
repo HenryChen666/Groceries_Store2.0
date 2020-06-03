@@ -1,6 +1,7 @@
 var products = [
 	{
 		name: "Brocoli",
+		id:"p1",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -10,10 +11,12 @@ var products = [
 		vegetables:true,
 		meat:false,
 		seafood:false,
+		img: "Image/Brocoli.jpg",
 		price: 1.99
 	},
 	{
 		name: "Tomato",
+		id:"p2",
 		organic: true,
 		diabetic: false,
 		Lactose: false,
@@ -23,10 +26,12 @@ var products = [
 		vegetables:true,
 		meat:false,
 		seafood:false,
+		img: "Image/Tomato.jpg",
 		price: 1.50
 	},
 	{
 		name: "Rice",
+		id:"p3",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -36,10 +41,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:false,
+		img: "Image/Rice.jpeg",
 		price: 4.00
 	},
 	{
 		name: "Eggs",
+		id:"p4",
 		organic: true,
 		diabetic: false,
 		Lactose: false,
@@ -49,10 +56,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:false,
+		img: "Image/Eggs.jpg",
 		price: 2.55
 	},
 	{
 		name: "Milk",
+		id:"p5",
 		organic: true,
 		diabetic: false,
 		Lactose: true,
@@ -62,10 +71,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:false,
+		img: "Image/Milk.jpg",
 		price: 3.55
 	},
 	{
 		name: "Bread",
+		id:"p6",
 		organic: false,
 		diabetic: true,
 		Lactose: false,
@@ -75,10 +86,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:false,
+		img: "Image/Bread.jpg",
 		price: 2.35
 	},
 	{
 		name: "Salmon",
+		id:"p7",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -88,10 +101,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:true,
+		img: "Image/Salmon.jpg",
 		price: 10.00
 	},
 	{
-		name: "Meat",
+		name: "Chicken",
+		id:"p8",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -101,10 +116,12 @@ var products = [
 		vegetables:false,
 		meat:true,
 		seafood:false,
+		img: "Image/chicken.jpg",
 		price: 15.00
 	},
 	{
 		name: "Beef",
+		id:"p9",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -114,10 +131,12 @@ var products = [
 		vegetables:false,
 		meat:true,
 		seafood:false,
+		img: "Image/beef.jpg",
 		price: 13.00
 	},
 	{
 		name: "Fish",
+		id:"p10",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -127,10 +146,12 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:true,
+		img: "Image/Fish.jpeg",
 		price: 9.00
 	},
 	{
 		name: "Musseels",
+		id:"p11",
 		organic: false,
 		diabetic: false,
 		Lactose: false,
@@ -140,6 +161,7 @@ var products = [
 		vegetables:false,
 		meat:false,
 		seafood:true,
+		img: "Image/Musseels.jpg",
 		price: 20.00
 	}
 	
@@ -167,64 +189,64 @@ function restrictDairyProducts(prods, restriction) {
 			if ((restriction == "Vegetarian") && (prods[i].dairy == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
 				console.log(prods[i].organic);
 				
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].dairy == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if ( diabetic == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].dairy == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].dairy == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if (lactose == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].dairy == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].dairy == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else{
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].dairy == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].dairy == true) && (prods[i].glutenFree == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "None") && (prods[i].dairy == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 	}
 }
@@ -252,64 +274,64 @@ function restrictVegetableProducts(prods, restriction) {
 			if ((restriction == "Vegetarian") && (prods[i].vegetables == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
 				console.log(prods[i].organic);
 				
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].vegetables == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if ( diabetic == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].vegetables == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].vegetables == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if (lactose == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].vegetables == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].vegetables == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else{
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetables == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].vegetables == true) && (prods[i].glutenFree == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "None") && (prods[i].vegetables == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 	}
 }
@@ -336,64 +358,64 @@ function restrictMeatProducts(prods, restriction) {
 			if ((restriction == "Vegetarian") && (prods[i].meat == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
 				console.log(prods[i].organic);
 				
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].meat == true) && (prods[i].meat == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].meat == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if ( diabetic == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].meat == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].meat == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if (lactose == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].meat == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].meat == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else{
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].meat == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].meat == true) && (prods[i].glutenFree == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "None") && (prods[i].meat == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 	}
 }
@@ -417,64 +439,64 @@ function restrictSeafoodProducts(prods, restriction) {
 			if ((restriction == "Vegetarian") && (prods[i].seafood == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
 				console.log(prods[i].organic);
 				
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].seafood == true) && (prods[i].meat == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].seafood == true) && (prods[i].organic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if ( diabetic == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].seafood == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].seafood == true) && (prods[i].diabetic == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else if (lactose == true){
 		for (let i=0; i<prods.length; i+=1) {
 			if ((restriction == "Vegetarian") && (prods[i].seafood == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 			else if ((restriction == "None") && (prods[i].seafood == true) && (prods[i].lactose == true)){
-				product_names.push({name:prods[i].name, price:prods[i].price});
+				product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 			}
 		}
 	}
 	else{
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].seafood == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "Vegetarian and GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].seafood == true) && (prods[i].glutenFree == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 		else if ((restriction == "None") && (prods[i].seafood == true)){
-			product_names.push({name:prods[i].name, price:prods[i].price});
+			product_names.push({name:prods[i].name, price:prods[i].price, img:prods[i].img, id:prods[i].id});
 		}
 	}
 }

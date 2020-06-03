@@ -98,3 +98,62 @@ span{
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+
+#DairyProduct{
+    display: inline-block;
+}
+
+[type="checkbox"]{
+    vertical-align:middle;
+}
+
+  label[class="textOverImage"]{
+    border-radius: 25%;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+ 
+  }
+  
+  label[class="textOverImage"]:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 20%;
+    border: 5px solid blueviolet;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  
+  label[class="textOverImage"] img {
+    height: 100px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: center;
+  }
+  
+  :checked +  label[class="textOverImage"] {
+    border-color:blueviolet;
+  }
+  
+  :checked +  label[class="textOverImage"]:before {
+    content: "Added";
+    color:white;
+    background-color: blueviolet;
+    transform: scale(1);
+  }
+  
+  :checked + label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #333;
+    z-index: -1;
+  }

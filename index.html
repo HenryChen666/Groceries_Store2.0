@@ -5,7 +5,7 @@
     </head>
     
     <body>
-
+<link href="Style/content.css" rel="stylesheet" type="text/css">
 
 <!-- Side navigation -->
 <div class="sidenav">
@@ -14,7 +14,7 @@
   <button id = "main" class="tablinks" onclick="openInfo(event, 'Main')">Main</button><br>
   <button class="tablinks" onclick="openInfo(event, 'Filter')">Filter</button><br>
   <script src="Script/sidebar.js"></script>
-  <button id = "dropdown" class="dropdown-btn">Products <i class="fa fa-caret-down"></i></button>
+  <button id = "dropdown" class="dropdown-btn">Products <i class="fa fa-caret-down"></i> </button>
     <div class = "dropdown-container">
       <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Dairy')">Dairy</a>
         <button class = "dropdownbutn" onclick="openInfoDropdown(event, 'Vegetables')">Vegetables</a>
@@ -49,7 +49,7 @@
 </div>
 
   <!-- Page content -->
-  <link href="Style/content.css" rel="stylesheet" type="text/css">
+  
   <div class="page_content">
   <div id="Main" class="tabcontent">
     <div class="Main_page">
@@ -93,7 +93,9 @@
     <h1 style="text-align: center;">Products </h1>
     <p><b>Sorted: Price Low to High</b></p>
      <h2>Choose items to buy:</h2>
+
      <div id="DairyProduct"></div>
+
      <br>
     <div class="addcart">
      <button id="addCart" type="button" class="block" onclick="selectedItems()">
