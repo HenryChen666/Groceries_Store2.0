@@ -16,6 +16,34 @@
     margin: 0 auto;
   }
   
+  /* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.dropdown-btn:hover {
+  color: black;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #eeeeee;
+  padding-left: 8px;
+}
+
+
   /* The navigation menu links */
   .sidenav button {
     padding: 6px 8px 6px 16px;
@@ -26,7 +54,35 @@
     background-color: #eeeeee;
     border:none;
   }
+
+  /* On mouse-over */
+  .sidenav a:hover, .tablinks:hover {
+    color: #f1f1f1;
+  }
+/* Add an active class to the active dropdown button */
+#dropdown button:active {
+  background-color: green;
+  color: white;
+}
+.dropdown-btn:active{
+  color: black;
+  background-color: white;
+  border: none;
+  border-left: 5px black solid;
+}
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #eeeeee;
+    padding-left: 8px;
+  }
   
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  color: white;
+}
   /* When you mouse over the navigation links, change their color */
   .sidenav button:hover {
     color: black;
@@ -62,4 +118,15 @@
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
